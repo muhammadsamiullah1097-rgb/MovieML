@@ -1,52 +1,22 @@
 # MovieML Studio — ML Midterm Project
 
-This repository contains the source-code bundle for the MovieML Studio project.
+This is the GitHub repository reserved for the MovieML Studio project.
 
-## Get the source code
+The complete project ZIP is available in the ChatGPT conversation where it was generated. The GitHub publishing attempt could not transfer the full archive reliably, so this repository does **not yet contain the project source files**. No incomplete archive is being presented as a working download.
 
-Download [MovieML_Source_Code.tar.xz.b64](MovieML_Source_Code.tar.xz.b64), decode it, and extract the archive.
+## Project dataset
 
-### Windows PowerShell
-
-```powershell
-certutil -decode MovieML_Source_Code.tar.xz.b64 MovieML_Source_Code.tar.xz
-tar -xf MovieML_Source_Code.tar.xz
-```
-
-### Linux / macOS
-
-```bash
-base64 -d MovieML_Source_Code.tar.xz.b64 > MovieML_Source_Code.tar.xz
-tar -xf MovieML_Source_Code.tar.xz
-```
-
-## Dataset
-
-The application uses the Kaggle **The Movies Dataset**:
-
+Kaggle — The Movies Dataset:
 https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset
 
-After downloading and extracting the Kaggle archive, place these four CSV files in:
+The project uses movie metadata, MovieLens ratings, keywords, and movie ID mapping CSV files.
 
-`MovieML_Midterm_Project/backend/data/raw/`
+## Planned project contents
 
-- `movies_metadata.csv`
-- `ratings_small.csv`
-- `keywords.csv`
-- `links_small.csv`
+- FastAPI backend
+- HTML, CSS, and JavaScript frontend
+- Classification, regression, and text-classification experiments
+- Preprocessing, feature selection, and dimensionality reduction
+- Content-based and collaborative movie recommendations
+- Dataset and evaluation documentation
 
-The CSV files are not included in this source bundle. The three saved `.joblib` model artifacts are also not included; train a model from the application to generate them.
-
-## Run locally
-
-1. Install Python 3.10 or newer.
-2. Extract the source archive.
-3. Open a terminal in `MovieML_Midterm_Project/backend`.
-4. Create and activate a virtual environment.
-5. Install dependencies with `pip install -r requirements.txt`.
-6. Start the API with `uvicorn app.main:app --reload`.
-7. Open `http://127.0.0.1:8000`.
-
-API documentation: `http://127.0.0.1:8000/docs`
-
-For detailed module information, evaluation notes, and troubleshooting, see the project README and files under `docs/`.
